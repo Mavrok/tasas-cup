@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tasas CUP</title>
+<meta name="description" content="Aplicación Android personal para consultar las tasas informales del peso cubano (USD, EUR y otras monedas) usando la API oficial de elTOQUE.">
+<style>
+:root{
+  --cream:#EBE4D3; --blue:#174A6E; --palm:#C7AD7E; --wood:#999388; --ink:#0c2638;
+  --bg:var(--cream); --fg:var(--ink); --card:#f4efe2; --line:#d8cfba; --accent:var(--blue);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0c2638; --fg:#EBE4D3; --card:#12354f; --line:#245173; --accent:var(--palm)}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:720px;margin:0 auto;padding:48px 20px 64px}
+h1{font-size:2.4rem;line-height:1.1;margin:0 0 6px;letter-spacing:-.02em}
+.sub{color:var(--wood);margin:0 0 32px}
+h2{font-size:1.15rem;margin:36px 0 8px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;background:var(--card);border:1px solid var(--line);padding:1px 6px;border-radius:4px;font-size:.92em}
+ul{padding-left:1.2em}
+a{color:var(--accent)}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);color:var(--wood);font-size:.9rem}
+.bar{height:6px;background:linear-gradient(90deg,var(--blue) 25%,var(--palm) 25% 50%,var(--wood) 50% 75%,var(--cream) 75%);border-radius:3px;margin-bottom:28px}
+</style>
+</head>
+<body>
+<main>
+  <div class="bar"></div>
+  <h1>Tasas CUP</h1>
+  <p class="sub">Aplicación Android personal para consultar el precio de las monedas frente al peso cubano.</p>
+
+  <h2>Qué hace</h2>
+  <p>Muestra la tasa de cambio informal del peso cubano (CUP) para el dólar (USD), el euro (EUR) y otras monedas, con la bandera de cada país, una gráfica de barras y línea con la evolución del último mes y modo claro y oscuro.</p>
+  <ul>
+    <li>Actualización manual deslizando la pantalla hacia abajo.</li>
+    <li>Consulta automática en segundo plano cada 3 horas.</li>
+    <li>Historial de 30 días guardado en el propio teléfono.</li>
+  </ul>
+
+  <h2>Fuente de los datos</h2>
+  <div class="card">
+    Las tasas se obtienen de la API oficial de <a href="https://tasas.eltoque.com/docs/">elTOQUE</a>
+    (<code>https://tasas.eltoque.com/v1/trmi</code>) con un token personal. Los datos pertenecen a elTOQUE.
+    Esta aplicación no está afiliada ni respaldada por elTOQUE.
+  </div>
+
+  <h2>Uso previsto</h2>
+  <p>Proyecto personal sin fines comerciales, para uso propio. No se publica en tiendas de aplicaciones y no muestra publicidad. La consulta a la API se hace directamente desde el teléfono del usuario, con pocas solicitudes por día.</p>
+
+  <h2>Privacidad</h2>
+  <p>La aplicación no recopila datos personales ni usa servidores propios. El token y el historial de tasas se guardan solo en el teléfono.</p>
+
+  <h2>Detalles técnicos</h2>
+  <div class="card">
+    Paquete Android: <code>com.appdce.tasascup</code><br>
+    Versión: 1.1.0 · Android 8.0 o superior
+  </div>
+
+  <footer>Tasas CUP · proyecto académico y personal. Datos de elTOQUE.</footer>
+</main>
+</body>
+</html>
